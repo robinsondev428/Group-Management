@@ -28,9 +28,6 @@ class AuthService {
       password: user.password
     });
   }
- computed mapStae{
-  count:state ->state countjs
- }
 }
 
 export default new AuthService();

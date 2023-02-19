@@ -1,8 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../components/Login.vue';
 import Register from '../components/Register.vue';
+import Home from '../components/Home.vue';
+import DrinkSaltWater from '../components/DrinkSaltWater.vue';
+import Layout from "../components/Layout.vue";
 
 const routes = [
+  {
+    path:"/",
+    name:'Home',
+    component: Home,
+    children: [
+      {
+        path: "drink-salt-water",
+        component: DrinkSaltWater,
+      },
+      {
+        path: "landing-page",
+        name:"Layout",
+        component: Layout,
+      }
+    ]
+  },
   {
     path:'/register',
     name:'Register',
